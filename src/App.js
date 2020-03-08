@@ -8,10 +8,11 @@ function App() {
   const [items, setItems] = useState([])
   const [loaded, setLoaded] = useState(false)
   const [expanded, setExpanded] = useState(false)
+  const apiKey = "RGAPI-c1e7f231-ee33-4d7b-bd1f-abb290f05557";
 
 
   useEffect(() => {
-    fetch('https://competa-api.dev.competa.com/api/categoriesWithProducts')
+    fetch('https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations')
       .then(res => res.json())
       .then(json => {
         setLoaded(true)
